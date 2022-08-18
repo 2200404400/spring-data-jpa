@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 1. 数据库 -->
+        <property name="connection.url">jdbc:mysql://192.168.70.101:3306/test?serverTimezone=GMT%2B8</property>
+        <property name="connection.username">admin</property>
+        <property name="connection.password">admin</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!--生成sql 语句-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 配置本地事务（No CurrentSessionContext configured!） -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!-- 2. 调试相关 -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- 3. 添加实体映射文件 可以创建多个 -->
+        <mapping package="com.example.springdatajps.entity"/>
+    </session-factory>
+</hibernate-configuration>
