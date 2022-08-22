@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-// 设为配置雷
+// 设为配置类
 @Configuration
 // 启动Jpa，扫描mapper层
 @EnableJpaRepositories(basePackages = "com.example.springdatajpa.repositories")
